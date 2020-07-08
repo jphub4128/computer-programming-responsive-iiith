@@ -35,10 +35,9 @@
 			        <input class = 'inputValueField' type = 'text'	value = '11' id = 'd' disabled >
 		        </div>
 		        <button class = 'button saveButton hide' id = 'buttonSave' >Save</button>
-		        <button class = 'button editButton' id = 'buttonEdit' >Edit</button>
+		        <button class = 'button editButton' id = 'buttonEdit' onclick="edit()">Edit</button>
 		        <select class = 'button loopList' id = 'arithmaticExpressions' >
-		     		<option> a*(b+c) </option>
-                            <option> a + b - c </option>
+		     		<option> a + b - c </option>
 		            <option> a + b / c </option>
 		            <option> ( a + b ) / c </option>
 		            <option> ( a + b ) * c - d </option>
@@ -57,7 +56,7 @@
 		            <option> a << b </option>
 		            <option> a >> b </option>
 		        </select>
-		    	<input class = 'inputField marginBottom' type = 'text'  value = 'a*(b+c)'  id = 'selectedExpression'>
+		    	<input class = 'inputField marginBottom' type = 'text'  value = 'a + b - c'  id = 'selectedExpression'>
 				<button class = 'button startButton' id = 'buttonStart'>Start</button>
 				<button class = 'button stopButton hide' id = 'stopButton'>Stop</button>
 				<button class = 'buttonDisable nextButton' id = 'buttonNext' disabled>Next</button>
@@ -77,5 +76,18 @@
 				<div class = 'currentStepBox' id = 'currentStep'></div>
 			</div><!-- end of resultDisplay -->
 		</div><!-- end of outputDivision -->
+<script>
+			function edit() {
+			  var x ,y,z,k;
+			  x = document.getElementById("a").value;
+			  y = document.getElementById("b").value;
+			  z = document.getElementById("c").value;
+			  k = document.getElementById("d").value;
+			  document.getElementById("a").value = "";
+			  document.getElementById("b").value = "";
+			  document.getElementById("c").value = "";
+			  document.getElementById("d").value = "";
+			}
+</Script>
 	</body>
 </html>
